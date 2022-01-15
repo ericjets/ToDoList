@@ -18,9 +18,9 @@ What does it do?
 - The user is also able to completely reset their list of tasks so that they can start a new list with all new tasks.
 
 Technology Used?
-- HTML5, CSS3, Javascript
+- HTML5, CSS3, Javascript, SCSS
 
-I will make a folder that contains feature logs so that its easy to see the improvements from update to update.
+See the updates folder, to see the new features added from version to version.
 
 I hope you enjoy the program and as always,
 
