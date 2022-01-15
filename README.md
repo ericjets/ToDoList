@@ -13,11 +13,13 @@ Github knowledge).
 So lets get into the nitty gritty, shall we!
 
 What does it do?
+
 - It allows a user to track the list of tasks they would like to keep track of
 - Once a task is completed, the user can go back and mark it as such. Giving the user the visual reward of marking something off.
 - The user is also able to completely reset their list of tasks so that they can start a new list with all new tasks.
 
 Technology Used?
+
 - HTML5, CSS3, Javascript, SCSS
 
 See the updates folder, to see the new features added from version to version.
