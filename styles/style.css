@@ -1,0 +1,15 @@
+.list-item {
+  color: red;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.finished {
+  text-decoration: line-through;
+}
+
+.unfinished {
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */
