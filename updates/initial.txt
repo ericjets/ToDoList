@@ -1,0 +1,8 @@
+This was the initial rollout of the program.
+version: 1.0.0.0
+
+Features Contained:
+- Add Task to a list
+- Mark Task as complete and reflect to the user
+- Unmark a task as complete and reflect to the user
+- Clear the to do list
