@@ -1,0 +1,17 @@
+.list-item {
+    color: red;
+    width: min-content;
+}
+
+// .list-item:hover {
+//     text-decoration:line-through;
+//     cursor: pointer;
+// }
+
+.finished {
+    text-decoration: line-through;
+}
+
+.unfinished {
+    text-decoration: none;
+}

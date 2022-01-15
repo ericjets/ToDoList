@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div id="list">
+        <div id="default-item" data-state="unfinished" class="list-item">
+            Make Breakfast
+        </div>
+    </div>
+
+    <form id="new-item-form">
+        <label for="item-input">New Item: </label>
+        <input type="text" id="item-input" name="item">
+        <button type="submit">Add Task</button>
+        <button type="button" id="btn-clear-list">Clear List</button>
+    </form>
+</body>
+</html>
