@@ -1,15 +1,97 @@
-.list-item {
-  color: blue;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
+#content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#add-list-button {
+  width: 100px;
+  height: 50px;
+}
+
+.list-container {
+  border: 2px solid black;
+  border-radius: 25px;
+  width: 300px;
+  height: auto;
+  padding: 10px;
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list-container form {
+  width: 90%;
+  margin-bottom: 10px;
+}
+
+.list-container form .task-input {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+
+.list-container form .task-input:focus {
+  outline: none;
+}
+
+.list {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.task {
+  background-color: green;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  line-height: 25px;
+}
+
+.task:hover {
+  cursor: pointer;
 }
 
 .finished {
   text-decoration: line-through;
+  color: lightgray;
+  font-style: italic;
 }
 
 .unfinished {
   text-decoration: none;
+  color: black;
+  font-style: normal;
+}
+
+.list-title {
+  font-size: 20px;
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */

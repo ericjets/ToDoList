@@ -1,0 +1,12 @@
+Version 1.2.0.0
+Added:
+- updated UI
+- add new list feature
+
+Removed:
+- removed task hover functionality 
+    - didnt see the need to have the task strikethrough display on 
+        hover but should only strikethrough when clicked to reflect
+        the task was complete
+    - moved the hover pointer strictly to css
+- removed clear list feature but will be adding it in near future
