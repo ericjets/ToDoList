@@ -22,7 +22,10 @@ Technology Used?
 
 - HTML5, CSS3, Javascript, SCSS
 
-See the updates folder, to see the new features added from version to version.
+Current Version?
+
+- 1.2.0.0
+- See the updates folder, to see the new features added from version to version.
 
 I hope you enjoy the program and as always,
 
