@@ -1,97 +1,120 @@
-const form = document.querySelector("#new-item-form");
-const list = document.querySelector("#list");
-const item = document.querySelector("#item-input");
-const defaultItem = document.querySelector("#default-item");
-const clearListButton = document.querySelector("#btn-clear-list");
+// CREATE LIST
+// Creates a new list and adds it to the page
+function createList() {
+    // Create container for list
+    const newList = document.createElement("div");
+    newList.classList.add("list-container");
+    // Add Title
+    const title = document.createElement("span");
+    title.classList.add("list-title");
+    title.innerText = "List Title";
+    // Create list div
+    const list = document.createElement("div");
+    list.classList.add("list");
+    // Populate with default task
+    const defaultTask = document.createElement("div");
+    defaultTask.dataset.state = "unfinished";
+    defaultTask.className = "task unfinished";
+    defaultTask.innerText = "Task 1";
+    // Add Form
+    const form = document.createElement("form");
+    const input = document.createElement("input");
+    input.type = "text";
+    input.classList.add("task-input");
+    form.append(input);
+    
+    // Add it all together
+    newList.append(title);
+    newList.append(list);
+    list.append(defaultTask);
+    newList.append(form);
 
-// ******** FORM FUNCTIONALITY ********
+    // Setup List
+    listSetup(newList);
+    // Add to content section
+    content.append(newList);
+    //console.log(newList);
+}
 
-// Adds new task to list and resets the input field.
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    list.append(createItem(item.value));
-    form.children[1].value = "";
-});
-
-// ******** CLEAR LIST BUTTON FUNCTIONALITY ********
-
-// When "Clear List" button is clicked this fires and removes all tasks
-// (finished or unfinished) from the list.
-clearListButton.addEventListener("click", () => {
-    const tasks = Array.from(list.children);
+function listSetup(list) {
+    //  add toggleState functionality to their task
+    const tasks = Array.from(list.children[1].children);
+    console.dir(list.children[1].children);
     tasks.forEach(task => {
-        task.remove();
+        task.addEventListener("click", () => {
+            // toggle state of task (finished/unfinished)
+            toggleState(task);
+        });
     });
-});
 
-// ******** DEFAULT ITEM FUNCTIONALITY ********
+    // stop default form functionality
+    const form = list.querySelector("form");
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+    });
 
-defaultItem.addEventListener("click", () => {
-    toggleState(defaultItem);
-});
+    // Add task to list by pressing Enter functionality
+    const input = list.querySelector("input");
+    input.addEventListener("keyup", e => {
+        if (e.code === "Enter") {
+            const newTask = createTask(input.value);
+            list.children[1].append(newTask);
+            form.children[0].value = "";
+        }
+    });
+}
 
-defaultItem.addEventListener("mouseover", () => {
-    hover(defaultItem);
-});
+// CREATE TASK
+// Creates a new item for the list
+function createTask(itemName) {
+    const newTask = document.createElement("div");
+    newTask.classList.add("task");
+    newTask.classList.add("unfinished");
+    newTask.innerText = itemName;
+    newTask.dataset.state = "unfinished";
 
-defaultItem.addEventListener("mouseout", () => {
-    hoverReset(defaultItem);
-});
+    newTask.addEventListener("click", () => {
+        // toggle state of task (finished/unfinished)
+        toggleState(newTask);
+    });
 
-// ******** UTILITY FUNCTIONS ********
+    return newTask;
+}
 
+// TOGGLE STATE 
 // Toggles the strikethrough of the item, so that when it is clicked
 // the item reflects that it is complete. Or it sets the item back to
 // unfinished.
-function toggleState(item) {
-    if (item.dataset.state == "unfinished") {
-        item.dataset.state = "finished";
-        item.className = "list-item finished";
+function toggleState(task) {
+    if (task.dataset.state === "unfinished") {
+        task.dataset.state = "finished";
+        task.className = "task finished";
     } else {
-        item.dataset.state = "unfinished";
-        item.className = "list-item unfinished";
+        task.dataset.state = "unfinished";
+        task.className = "task unfinished";
     }
 }
 
-// When the user hovers over an item in the list, this changes its display
-// to reflect what the item will look like (finished or unfinished) once clicked.
-function hover(item) {
-    if (item.dataset.state == "unfinished") {
-        item.style.textDecoration = "line-through";
-    } else {
-        item.style.textDecoration = "none";
-    }
-}
+// Default config
+const lists = document.querySelectorAll(".list-container");
+// Get all lists on page and ...
+lists.forEach(list => {
+    listSetup(list);
+});
+// Add Control Buttons Functionality
+const addListButton = document.querySelector("#add-list-button");
+addListButton.addEventListener("click", () => {
+    createList();
+});
 
-// Resets the display of the item back to what it was before hovering over it.
-function hoverReset(item) {
-    if (item.dataset.state == "unfinished") {
-        item.style.textDecoration = "none";
-    } else {
-        item.style.textDecoration = "line-through";
-    }
-}
 
-// Creates a new item for the list
-function createItem(itemName) {
-    const newItem = document.createElement("div");
-    newItem.className = "list-item";
-    newItem.textContent = itemName;
-    newItem.dataset.state = "unfinished";
+// // ******** CLEAR LIST BUTTON FUNCTIONALITY ********
 
-    newItem.addEventListener("click", (e) => {
-        toggleState(newItem);
-    });
-
-    newItem.addEventListener("mouseover", (e) => {
-        hover(newItem);
-    });
-
-    newItem.addEventListener("mouseout", (e) => {
-        hoverReset(newItem);
-    });
-
-    return newItem;
-}
-
+// // When "Clear List" button is clicked this fires and removes all tasks
+// // (finished or unfinished) from the list.
+// clearListButton.addEventListener("click", () => {
+//     const tasks = Array.from(list.children);
+//     tasks.forEach(task => {
+//         task.remove();
+//     });
+// });
