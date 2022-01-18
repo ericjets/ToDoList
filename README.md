@@ -24,7 +24,7 @@ Technology Used?
 
 Current Version?
 
-- 1.2.0.0
+- 1.2.1.0
 - See the updates folder, to see the new features added from version to version.
 
 I hope you enjoy the program and as always,

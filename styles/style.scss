@@ -1,3 +1,8 @@
+$color-beige: #FFF1BD;
+$color-tan: #F3C892;
+$color-lightgreen: #A3DA8D;
+$color-darkgreen: #146356;
+
 #content {
     display: flex;
     justify-content: center;
@@ -10,8 +15,16 @@
 }
 
 #add-list-button {
-    width: 100px;
+    width: 125px;
     height: 50px;
+    background-color: $color-darkgreen;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-weight: 900;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .list-container {
@@ -24,7 +37,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    background-color: $color-beige;
     form {
         width: 90%;
         margin-bottom: 10px;
@@ -35,7 +48,7 @@
             border-left: none;
             border-bottom: 1px solid black;
             width: 100%;
-
+            background-color: $color-beige;
             &:focus {
                 outline: none;
             }
@@ -44,20 +57,15 @@
 }
 
 .list {
-    //background-color: green;
-    //border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     width: 90%;
-    
 }
 
 .task {
-    background-color: green;
     margin-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    //border: 1px solid black;
     border-radius: 10px;
     line-height: 25px;
     &:hover {
@@ -67,18 +75,34 @@
 
 .finished {
     text-decoration: line-through;
-    color: lightgray;
+    color: white;
     font-style: italic;
+    background-color: $color-lightgreen;
 }
 
 .unfinished {
     text-decoration: none;
     color: black;
     font-style: normal;
+    font-weight: bold;
 }
 
 .list-title {
     font-size: 20px;
     font-weight: bold;
+    border: none;
+    text-align: center;
+    background-color: $color-beige;
+    &::placeholder {
+        color: black;
+    }
+
+    &:focus::placeholder {
+        color: transparent;
+    }
+}
+
+body {
+    background-color: $color-tan;
 }
 
