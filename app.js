@@ -5,9 +5,12 @@ function createList() {
     const newList = document.createElement("div");
     newList.classList.add("list-container");
     // Add Title
-    const title = document.createElement("span");
+    // const title = document.createElement("span");
+    // title.classList.add("list-title");
+    // title.innerText = "List Title";
+    const title = document.createElement("input");
     title.classList.add("list-title");
-    title.innerText = "List Title";
+    title.placeholder = "List Title";
     // Create list div
     const list = document.createElement("div");
     list.classList.add("list");
@@ -54,7 +57,7 @@ function listSetup(list) {
     });
 
     // Add task to list by pressing Enter functionality
-    const input = list.querySelector("input");
+    const input = list.querySelector(".task-input");
     input.addEventListener("keyup", e => {
         if (e.code === "Enter") {
             const newTask = createTask(input.value);

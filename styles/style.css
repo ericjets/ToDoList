@@ -19,8 +19,16 @@
 }
 
 #add-list-button {
-  width: 100px;
+  width: 125px;
   height: 50px;
+  background-color: #146356;
+  border: 2px solid black;
+  border-radius: 15px;
+  font-weight: 900;
+}
+
+#add-list-button:hover {
+  cursor: pointer;
 }
 
 .list-container {
@@ -40,6 +48,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #FFF1BD;
 }
 
 .list-container form {
@@ -53,6 +62,7 @@
   border-left: none;
   border-bottom: 1px solid black;
   width: 100%;
+  background-color: #FFF1BD;
 }
 
 .list-container form .task-input:focus {
@@ -66,7 +76,6 @@
 }
 
 .task {
-  background-color: green;
   margin-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
@@ -80,18 +89,59 @@
 
 .finished {
   text-decoration: line-through;
-  color: lightgray;
+  color: white;
   font-style: italic;
+  background-color: #A3DA8D;
 }
 
 .unfinished {
   text-decoration: none;
   color: black;
   font-style: normal;
+  font-weight: bold;
 }
 
 .list-title {
   font-size: 20px;
   font-weight: bold;
+  border: none;
+  text-align: center;
+  background-color: #FFF1BD;
+}
+
+.list-title::-webkit-input-placeholder {
+  color: black;
+}
+
+.list-title:-ms-input-placeholder {
+  color: black;
+}
+
+.list-title::-ms-input-placeholder {
+  color: black;
+}
+
+.list-title::placeholder {
+  color: black;
+}
+
+.list-title:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.list-title:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.list-title:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.list-title:focus::placeholder {
+  color: transparent;
+}
+
+body {
+  background-color: #F3C892;
 }
 /*# sourceMappingURL=style.css.map */

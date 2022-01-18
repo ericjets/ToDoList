@@ -10,3 +10,10 @@ Removed:
         the task was complete
     - moved the hover pointer strictly to css
 - removed clear list feature but will be adding it in near future
+
+-----------------------------------------------------------------------
+
+Version 1.2.1.0
+Added:
+    - Added ability to change the list title name
+    - Made some cosmetic changes
