@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,24 @@
     <link rel="stylesheet" href="styles/style.css">
     <script defer src="app.js"></script>
 </head>
+
 <body>
+    <header>
+        <nav>
+            <div class="nav-brand">
+                <a href="#">
+                    <img class="brand-logo" src="/imgs/EricLogo-02.png" alt="ericjets logo">
+                </a>
+                <span class="brand-name">ERICJETS</span>
+            </div>
+            <div class="nav-control">
+                <button id="add-list-button" type="button">Add New List</button>
+            </div>
+        </nav>
+    </header>
+
     <section id="content">
         <div class="list-container">
-            <!-- <span class="list-title">My First List</span> -->
             <input type="text" class="list-title" placeholder="My First List">
             <div class="list">
                 <div data-state="unfinished" class="task unfinished">
@@ -23,9 +38,6 @@
             </form>
         </div>
     </section>
-
-    <div id="controls">
-        <button id="add-list-button" type="button">Add New List</button>
-    </div>
 </body>
+
 </html>

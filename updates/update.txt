@@ -17,3 +17,13 @@ Version 1.2.1.0
 Added:
     - Added ability to change the list title name
     - Made some cosmetic changes
+
+-----------------------------------------------------------------------
+
+Version 1.2.2.0
+Added:
+    - Added navbar to top of the page
+Updated:
+    - Moved add new list button to the navbar
+
+-----------------------------------------------------------------------

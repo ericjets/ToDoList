@@ -3,28 +3,21 @@ $color-tan: #F3C892;
 $color-lightgreen: #A3DA8D;
 $color-darkgreen: #146356;
 
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 #content {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding-top: 16px;
 }
 
 #controls {
     display: flex;
     justify-content: center;
-}
-
-#add-list-button {
-    width: 125px;
-    height: 50px;
-    background-color: $color-darkgreen;
-    border: 2px solid black;
-    border-radius: 15px;
-    font-weight: 900;
-
-    &:hover {
-        cursor: pointer;
-    }
 }
 
 .list-container {
@@ -104,5 +97,72 @@ $color-darkgreen: #146356;
 
 body {
     background-color: $color-tan;
+    margin: 0;
+}
+
+.brand-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.brand-name {
+    margin-left: 5px;
+    color: white;
+    font-weight: 700;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    border-right: 2px solid black;
+    width: min-content;
+    height: 100%;
+    padding-right: 20px;
+}
+
+.nav-control {
+    height: 100%;
+    border-right: 2px solid black;
+    width: 120px;
+    text-align: center;
+
+    &:hover {
+        background-color: #1b9b86;
+    }
+    button {
+        height: inherit;
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-weight: 700;
+        padding: 0px 5px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+header {
+    height: 60px;
+}
+
+nav {
+    background-color: $color-darkgreen;
+    border: 2px solid black;
+    padding: 2px 5px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 60px;
 }
 
