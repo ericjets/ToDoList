@@ -1,3 +1,8 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 #content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7,6 +12,7 @@
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding-top: 16px;
 }
 
 #controls {
@@ -16,19 +22,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-#add-list-button {
-  width: 125px;
-  height: 50px;
-  background-color: #146356;
-  border: 2px solid black;
-  border-radius: 15px;
-  font-weight: 900;
-}
-
-#add-list-button:hover {
-  cursor: pointer;
 }
 
 .list-container {
@@ -143,5 +136,83 @@
 
 body {
   background-color: #F3C892;
+  margin: 0;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.brand-name {
+  margin-left: 5px;
+  color: white;
+  font-weight: 700;
+}
+
+.nav-brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-right: 2px solid black;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  height: 100%;
+  padding-right: 20px;
+}
+
+.nav-control {
+  height: 100%;
+  border-right: 2px solid black;
+  width: 120px;
+  text-align: center;
+}
+
+.nav-control:hover {
+  background-color: #1b9b86;
+}
+
+.nav-control button {
+  height: inherit;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 0px 5px;
+}
+
+.nav-control button:hover {
+  cursor: pointer;
+}
+
+header {
+  height: 60px;
+}
+
+nav {
+  background-color: #146356;
+  border: 2px solid black;
+  padding: 2px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
 }
 /*# sourceMappingURL=style.css.map */
