@@ -14,9 +14,9 @@ So lets get into the nitty gritty, shall we!
 
 What does it do?
 
-- It allows a user to track the list of tasks they would like to keep track of
-- Once a task is completed, the user can go back and mark it as such. Giving the user the visual reward of marking something off.
-- The user is also able to completely reset their list of tasks so that they can start a new list with all new tasks.
+- Gives the user the ability to list out their tasks
+- The user can group together tasks by their own choosing
+- Mark tasks as completed, edit/remove tasks, create multiple lists
 
 Technology Used?
 
@@ -24,7 +24,7 @@ Technology Used?
 
 Current Version?
 
-- 1.2.2.0
+- 1.2.3.0
 - See the updates folder, to see the new features added from version to version.
 
 I hope you enjoy the program and as always,
