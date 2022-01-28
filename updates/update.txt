@@ -27,3 +27,10 @@ Updated:
     - Moved add new list button to the navbar
 
 -----------------------------------------------------------------------
+
+Version 1.2.3.0
+Added:
+    - Added edit and remove functionality for individual tasks via modal
+        popup when options button is clicked
+
+------------------------------------------------------------------------

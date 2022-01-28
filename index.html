@@ -30,12 +30,34 @@
             <input type="text" class="list-title" placeholder="My First List">
             <div class="list">
                 <div data-state="unfinished" class="task unfinished">
-                    Task 1
+                    <span>Task 12</span>
+                    <button class="edit-button">
+                        <img class="options-img" src="/imgs/settings.png" alt="options">
+                    </button>
                 </div>
             </div>
             <form>
                 <input type="text" class="task-input">
             </form>
+        </div>
+    </section>
+
+    <section id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close"> &times;</span>
+                <h2>Edit Task</h2>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body-input">
+                    <label for="taskNameEdit">New Task Name:</label>
+                    <input type="text" id="taskNameEdit">
+                </div>
+                <div class="modal-button-group">
+                    <button class="modal-btn" id="save-btn">Save</button>
+                    <button class="modal-btn" id="remove-btn">Remove</button>
+                </div>
+            </div>
         </div>
     </section>
 </body>
